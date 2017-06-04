@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $login = 'admin';
 $password = '1111';
 

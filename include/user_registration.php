@@ -7,7 +7,7 @@ if($user == ''){
 
 // post пришел
 if (isset($_POST['login'])) {
-    $error_messages = '';
+    $error_messages = array();
     if (empty($_POST['login'])) {
         $error_messages['login'] = 'Логин введен неверно';
     }
@@ -34,6 +34,7 @@ if (isset($_POST['login'])) {
             file_put_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/users.txt", serialize($user));
 
             header('location: /user/');
+            die();
         } else {
             $error_messages['user_exits'] = 'Пользователь с таким логином уже существует';
         }

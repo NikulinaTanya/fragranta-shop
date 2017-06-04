@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/orders.txt"));
 
 if($array == ''){
@@ -22,6 +24,6 @@ file_put_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/orders.txt", serializ
 
 setcookie('cart', '', time()-100, '/');
 
-header('location: '.$_SERVER['HTTP_REFERER']);
+header('location: /checkout?success=1');
 
 ?>

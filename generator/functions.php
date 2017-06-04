@@ -41,7 +41,7 @@ function MakeCompany(){
     }
     foreach ($array as $k => $v) {
         if($v <> ''){
-            if(!isset($_GET['manufacturer']) || $_GET['manufacturer'] == $k){
+            if(isset($_GET['manufacturer']) && $_GET['manufacturer'] == $k){
                 $result .= '<option value="'.$k.'" selected="selected">'.$v.'</option>';
             } else {
                 $result .= '<option value="'.$k.'">'.$v.'</option>';

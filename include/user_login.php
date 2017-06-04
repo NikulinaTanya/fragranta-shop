@@ -15,7 +15,7 @@ if (isset($_POST['login']) && $_POST['login'] <> '') {
             $_SESSION['user_online'] = 1;
             $_SESSION['user_login'] = $id;
             $_SESSION['user_message'] = 1;
-            header('Location: '.$_SERVER['HTTP_REFERER']);
+            header('Location: /user/');
         } else {
             header('Location: /admin/error?m=pass');
         }
