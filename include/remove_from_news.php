@@ -1,7 +1,6 @@
 <?php
 session_start();
-
-if(isset($_SESSION['admin_online']) && $_SESSION['admin_online'] == 1){
+if($_SESSION['admin_online'] == 1){
     $id = $_GET['i'];
 
     $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/news.txt"));

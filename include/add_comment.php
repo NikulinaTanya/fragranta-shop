@@ -1,6 +1,6 @@
 <?php
-session_start();
 
+session_start();
 $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/comments.txt"));
 
 if($array == ''){

@@ -6,10 +6,10 @@
     }
     ?>
     <a class="catalog-list__title news__title">
-        <?=$array[$i]['name']?>
-        <span class="catalog-list__price news__description"><?=$array[$i]['date']?> </span>
+        <?= htmlspecialchars($array[$i]['name']); ?>
+        <span class="catalog-list__price news__description"><?= htmlspecialchars($array[$i]['date']); ?> </span>
     </a>
-    <p class="catalog-list__price news__description"><?=$array[$i]['comment']?> </p>
+    <p class="catalog-list__price news__description"><?= htmlspecialchars($array[$i]['comment']); ?> </p>
 </div>
 
 <?php

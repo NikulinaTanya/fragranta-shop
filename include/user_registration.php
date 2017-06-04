@@ -32,7 +32,6 @@ if (isset($_POST['login'])) {
 
             array_push($user, $user_new);
             file_put_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/users.txt", serialize($user));
-
             header('location: /user/');
             die();
         } else {

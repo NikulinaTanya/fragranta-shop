@@ -19,8 +19,10 @@
                 ?>
                 <?php
                 if(isset($_SESSION['admin_online']) && $_SESSION['admin_online'] == 1){
-                    echo '<li class="active"><a href="/admin/addproduct">Добавить +</a></li>';
-                    echo '<li class="active"><a href="/admin/orders">Список заказов</a></li>';
+                    echo '<li class="active">
+                              <a href="/admin/addproduct">Добавить +</a><br/>
+                              <a href="/admin/orders">Список заказов</a>
+                           </li>';
                 }
                 ?>
             </ul>

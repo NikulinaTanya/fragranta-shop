@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+
 if(isset($_COOKIE['cart']) && $_COOKIE['cart'] <> ''){
     $array = unserialize($_COOKIE['cart']);
     array_push($array, $_GET['i']);
